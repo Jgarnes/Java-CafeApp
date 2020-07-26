@@ -1,16 +1,16 @@
 import React from 'react';
-import { FlatList, Text } from 'react-native';
-import { ListItem, Card } from 'react-native-elements';
+import { FlatList, Text, StyleSheet } from 'react-native';
+import { ListItem, Card, Tile } from 'react-native-elements';
 
 function Directory(props) {
 
     const renderDirectoryItem = ({item}) => {
         return (
-            <Card
+            <Card featuredTitleStyle={{backgroundColor:'rgba(0,0,0,0.5)'}}
                 featuredTitle={item.name}
-                image={require('./images/breakfast.jpg')}>
-                <Text style={{margin:10, textAlign:'center'}}>{item.description}</Text>
-            </Card>        
+                image={item.image}>   
+                <Text style={styles.text}>{item.description}</Text> 
+            </Card>         
         )
     };
 
@@ -22,5 +22,13 @@ function Directory(props) {
         />
     )
 }
+
+const styles = StyleSheet.create({
+    text: {
+        margin:10, 
+        textAlign:'center', 
+        backgroundColor: 'goldenrod'
+    }
+});
 
 export default Directory;

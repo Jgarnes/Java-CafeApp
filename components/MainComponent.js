@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     image: {
       flex: 1,
       resizeMode: "cover",
-      justifyContent: "center"
+      justifyContent: "center",
     },
     text: {
       color: "grey",
