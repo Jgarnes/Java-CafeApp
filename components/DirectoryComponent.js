@@ -6,11 +6,16 @@ function Directory(props) {
 
     const renderDirectoryItem = ({item}) => {
         return (
+            
             <Card featuredTitleStyle={{backgroundColor:'rgba(0,0,0,0.5)'}}
+                containerStyle={{backgroundColor:'yellowgreen'}}
+                // containerStyle={{backgroundColor:'limegreen'}}
+                // containerStyle={{backgroundColor:'olivedrab'}}
+                // containerStyle={{backgroundColor:'palegoldenrod'}}
                 featuredTitle={item.name}
-                image={item.image}>   
-                <Text style={styles.text}>{item.description}</Text> 
-            </Card>         
+                image={item.image}>    
+            <Text style={styles.text}>{item.description}</Text>
+            </Card> 
         )
     };
 
@@ -27,7 +32,7 @@ const styles = StyleSheet.create({
     text: {
         margin:10, 
         textAlign:'center', 
-        backgroundColor: 'goldenrod'
+        // backgroundColor: 'goldenrod'
     }
 });
 
