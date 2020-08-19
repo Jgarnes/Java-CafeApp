@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
-import Directory from './DirectoryComponent';
+import Home from './HomeComponent';
 import Logo from './LogoComponent';
-import { ImageBackground, StyleSheet } from 'react-native';
-import  { CONTENTS } from '../shared/contents';
+import Menu from './MenuComponent';
+import Catering from './CateringComponent';
+import About from './AboutUs';
+import Events from './EventsComponent';
+import { ImageBackground, StyleSheet, View } from 'react-native';
+import { createStackNavigator } from 'react-navigation';
 
 
 class Main extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            contents:  CONTENTS
-        };
-    }
-
+ 
     render() {
+       console.log("props", this.props);
         return (
         
         <ImageBackground source={require('./images/background.jpg')} style={styles.image} >
         <Logo />
-        <Directory contents={this.state.contents} />
+        <Home  navigation={this.props.navigation} />
         </ImageBackground>
+        
         )
     }
 }
