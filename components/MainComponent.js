@@ -12,7 +12,6 @@ import { createStackNavigator } from 'react-navigation';
 class Main extends Component {
  
     render() {
-       console.log("props", this.props);
         return (
         
         <ImageBackground source={require('./images/background.jpg')} style={styles.image} >
