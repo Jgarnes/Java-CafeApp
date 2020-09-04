@@ -14,10 +14,7 @@ class Home extends Component {
     }
 
     render() {
-    const pressHandler = () => {
-        // console.log(id);
-     this.props.navigation.navigate('About')
-    }
+    
     // const renderDirectoryItem = ({item}) => {
     //     return (
     //         // <TouchableOpacity onPress={() => pressHandler(item.id)}>

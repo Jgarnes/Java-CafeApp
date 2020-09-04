@@ -16,10 +16,10 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Main" options={{header: () => null}} component={ Main }  />
-        <Stack.Screen name="Menu" component={ Menu }  />
-        <Stack.Screen name="Catering" component={ Catering }  />
-        <Stack.Screen name="About" component={ About }  />
-        <Stack.Screen name="Events" component={ Events }  />
+        <Stack.Screen name="Menu" options={{headerStyle: {backgroundColor: 'limegreen'}, headerTitleAlign: 'center' }} component={ Menu }  />
+        <Stack.Screen name="Catering" options={{headerStyle: {backgroundColor: 'limegreen'}, headerTitleAlign: 'center' }} component={ Catering }  />
+        <Stack.Screen name="About" options={{headerStyle: {backgroundColor: 'limegreen'}, headerTitleAlign: 'center' }} component={ About }  />
+        <Stack.Screen name="Events" options={{headerStyle: {backgroundColor: 'limegreen'}, headerTitleAlign: 'center' }} component={ Events }  />
       </Stack.Navigator>
     </NavigationContainer>
   );

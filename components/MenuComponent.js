@@ -1,15 +1,40 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
+import { Text, Image, StyleSheet, ScrollView, View } from 'react-native';
 
 
 function Menu({ navigation }) {
 
     return (
-    <Text style={{marginTop: 50}}>
-      This is the Menu component. It will hold the different items for the menu. 
-   </Text>
-    )    
-};
+          <ScrollView >
+            <View style={styles.container}>
+            <Image
+              style={styles.tinyLogo}
+              source={require('../components/images/menu.jpg')}
+            />
+            <Image
+              style={styles.tinyLogo}
+              source={require('../components/images/backmenu.jpg')}
+            />
+            </View>
+          </ScrollView>
+        );
+      }
+
+      const styles = StyleSheet.create({
+        container: {
+          flex: 1,
+          backgroundColor: 'goldenrod',
+          alignItems: 'center',
+          justifyContent: 'center',
+          flexDirection: 'column',
+        },
+        tinyLogo: {
+          width: 420,
+          height: 600,
+          marginBottom: 10,
+          // resizeMode: 'contain',
+        }
+      });
 
 
 export default Menu; 

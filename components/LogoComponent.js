@@ -4,7 +4,7 @@ import { Image } from 'react-native';
  function Logo() {
     return(
         <Image 
-            style={{alignSelf: 'center', marginTop:30}}
+            style={{alignSelf: 'center', marginTop:29, marginBottom:10}}
             source={require('./images/JavaLogo.png')}
         />   
     );
