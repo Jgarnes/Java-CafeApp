@@ -18,7 +18,7 @@ export default function App() {
         <Stack.Screen name="Main" options={{header: () => null}} component={ Main }  />
         <Stack.Screen name="Menu" options={{headerStyle: {backgroundColor: 'limegreen'}, headerTitleAlign: 'center' }} component={ Menu }  />
         <Stack.Screen name="Catering" options={{headerStyle: {backgroundColor: 'limegreen'}, headerTitleAlign: 'center' }} component={ Catering }  />
-        <Stack.Screen name="About" options={{headerStyle: {backgroundColor: 'limegreen'}, headerTitleAlign: 'center' }} component={ About }  />
+        <Stack.Screen name="About Us" options={{headerStyle: {backgroundColor: 'limegreen'}, headerTitleAlign: 'center' }} component={ About }  />
         <Stack.Screen name="Events" options={{headerStyle: {backgroundColor: 'limegreen'}, headerTitleAlign: 'center' }} component={ Events }  />
       </Stack.Navigator>
     </NavigationContainer>

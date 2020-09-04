@@ -6,7 +6,10 @@ function Events() {
 
     return (
       <Text style={{marginTop: 50}}>
-      This is the Events component. It will hold the event information.
+      Due to Covid-19 we currently have no Events scheduled at the moment.
+      {'\n'}
+      {'\n'}
+      Please stay tuned.
  </Text>
     )    
 };

@@ -1,6 +1,6 @@
 import React, { Component} from 'react';
 import  { CONTENTS } from '../shared/contents';
-import { FlatList, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import { FlatList, Text, StyleSheet, TouchableOpacity, ScrollView, Animated } from 'react-native';
 import { ListItem, Card, Tile } from 'react-native-elements';
 import { render } from 'react-dom';
 
@@ -9,8 +9,23 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            contents:  CONTENTS
+            contents:  CONTENTS,
+            scaleValue: new Animated.Value(0)
         };
+    }
+
+    animate() {
+        Animated.timing(
+            this.state.scaleValue,
+            {
+                toValue: 1,
+                duration: 1500
+            }
+        ).start();
+    }
+
+    componentDidMount() {
+        this.animate();
     }
 
     render() {
@@ -32,7 +47,7 @@ class Home extends Component {
     // };
 
         return(
-            <ScrollView>
+            <Animated.ScrollView style={{transform: [{scale: this.state.scaleValue}]}}>
             <TouchableOpacity onPress={() => this.props.navigation.navigate('Menu')}>
                 <Card featuredTitleStyle={{backgroundColor:'rgba(0,0,0,0.5)'}}
                     containerStyle={{backgroundColor:'yellowgreen'}}
@@ -55,7 +70,7 @@ class Home extends Component {
                 <Text style={styles.text}>{this.state.contents[1].description}</Text>
                 </Card> 
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => this.props.navigation.navigate('About')}>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('About Us')}>
                 <Card featuredTitleStyle={{backgroundColor:'rgba(0,0,0,0.5)'}}
                     containerStyle={{backgroundColor:'yellowgreen'}}
                     // containerStyle={{backgroundColor:'limegreen'}}
@@ -77,7 +92,7 @@ class Home extends Component {
                 <Text style={styles.text}>{this.state.contents[3].description}</Text>
                 </Card> 
             </TouchableOpacity>
-            </ScrollView>
+            </Animated.ScrollView>
         );
     }
 }
