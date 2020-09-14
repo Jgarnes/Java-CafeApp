@@ -14,7 +14,7 @@ export const CONTENTS = [
     {
         id: 2,
         name: 'About Us',
-        image: require('../components/images/aboutus.jpg'),
+        image: require('../components/images/aboutus1.jpg'),
         description: 'Find out more about us'
     },
     {
@@ -22,5 +22,11 @@ export const CONTENTS = [
         name: 'Events',
         image: require('../components/images/event1.jpg'),
         description: 'Take a look at the fun things we have going on and come hang out with us!!!'
+    },
+    {
+        id: 4,
+        name: 'Contact Us',
+        image: require('../components/images/contactus.png'),
+        description: 'Feel free to contact us!!!'
     }
 ]

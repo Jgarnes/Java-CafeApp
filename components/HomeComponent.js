@@ -47,7 +47,7 @@ class Home extends Component {
     // };
 
         return(
-            <Animated.ScrollView style={{transform: [{scale: this.state.scaleValue}]}}>
+            <Animated.ScrollView style={{transform: [{scale: this.state.scaleValue}], marginBottom: 20}}>
             <TouchableOpacity onPress={() => this.props.navigation.navigate('Menu')}>
                 <Card featuredTitleStyle={{backgroundColor:'rgba(0,0,0,0.5)'}}
                     containerStyle={{backgroundColor:'yellowgreen'}}
@@ -90,6 +90,17 @@ class Home extends Component {
                     featuredTitle={this.state.contents[3].name}
                     image={this.state.contents[3].image}>    
                 <Text style={styles.text}>{this.state.contents[3].description}</Text>
+                </Card> 
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Contact')}>
+                <Card featuredTitleStyle={{backgroundColor:'rgba(0,0,0,0.5)'}}
+                    containerStyle={{backgroundColor:'yellowgreen'}}
+                    // containerStyle={{backgroundColor:'limegreen'}}
+                    // containerStyle={{backgroundColor:'olivedrab'}}
+                    // containerStyle={{backgroundColor:'palegoldenrod'}}
+                    featuredTitle={this.state.contents[4].name}
+                    image={this.state.contents[4].image}>    
+                <Text style={styles.text}>{this.state.contents[4].description}</Text>
                 </Card> 
             </TouchableOpacity>
             </Animated.ScrollView>

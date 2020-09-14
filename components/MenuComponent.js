@@ -25,14 +25,15 @@ function Menu({ navigation }) {
           flex: 1,
           backgroundColor: 'goldenrod',
           alignItems: 'center',
-          justifyContent: 'center',
-          flexDirection: 'column',
+          // justifyContent: 'center',
+          // flexDirection: 'column',
+          // padding: 10
         },
         tinyLogo: {
-          width: 420,
-          height: 600,
-          marginBottom: 10,
-          // resizeMode: 'contain',
+          width: 400,
+          height: 550,
+          // marginBottom: 10,
+          resizeMode: 'contain',
         }
       });
 
